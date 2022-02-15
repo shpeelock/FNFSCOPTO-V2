@@ -1,0 +1,39 @@
+{
+	"song": {
+		"speed": 3.2,
+		"stage": "street-clone",
+		"player1": "bf-battle",
+		"player2": "clone",
+		"player3": null,
+		"events": [
+			[
+				14400,
+				[
+					[
+						"Play Animation",
+						"stare",
+						"dad"
+					]
+				]
+			],
+			[
+				153600,
+				[
+					[
+						"Play Animation",
+						"stare",
+						"dad"
+					]
+				]
+			]
+		],
+		"notes": [],
+		"splashSkin": "noteSplashes",
+		"validScore": false,
+		"gfVersion": "gf",
+		"bpm": 250,
+		"arrowSkin": "",
+		"needsVoices": true,
+		"song": "the-clone"
+	}
+}

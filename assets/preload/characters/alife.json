@@ -1,0 +1,78 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "idle",
+			"loop": false,
+			"name": "Alife idle"
+		},
+		{
+			"offsets": [
+				28,
+				4
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singLEFT",
+			"loop": false,
+			"name": "Alife left"
+		},
+		{
+			"offsets": [
+				-47,
+				-12
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singDOWN",
+			"loop": false,
+			"name": "Alife down"
+		},
+		{
+			"offsets": [
+				-28,
+				23
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singUP",
+			"loop": false,
+			"name": "Alife up"
+		},
+		{
+			"offsets": [
+				-44,
+				5
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singRIGHT",
+			"loop": false,
+			"name": "Alife right"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/alife",
+	"position": [
+		-30,
+		-100
+	],
+	"healthicon": "alife",
+	"flip_x": false,
+	"healthbar_colors": [
+		236,
+		45,
+		88
+	],
+	"camera_position": [
+		110,
+		140
+	],
+	"sing_duration": 6.1,
+	"scale": 0.75
+}
