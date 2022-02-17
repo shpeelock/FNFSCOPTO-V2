@@ -9,102 +9,80 @@
 			"fps": 24,
 			"anim": "idle",
 			"indices": [],
-			"name": "clone idle"
+			"name": "Idle"
 		},
 		{
 			"offsets": [
-				171,
-				-30
+				83,
+				22
 			],
 			"loop": false,
 			"fps": 24,
 			"anim": "singLEFT",
 			"indices": [],
-			"name": "clone left"
+			"name": "Left"
 		},
 		{
 			"offsets": [
-				-30,
-				-88
+				8,
+				-90
 			],
 			"loop": false,
 			"fps": 24,
 			"anim": "singDOWN",
 			"indices": [],
-			"name": "clone down"
+			"name": "Down"
 		},
 		{
 			"offsets": [
-				30,
+				107,
 				60
 			],
 			"loop": false,
 			"fps": 24,
 			"anim": "singUP",
 			"indices": [],
-			"name": "clone up"
+			"name": "Up"
 		},
 		{
 			"offsets": [
-				-30,
-				-84
+				-48,
+				-13
 			],
 			"loop": false,
 			"fps": 24,
 			"anim": "singRIGHT",
 			"indices": [],
-			"name": "clone right"
+			"name": "Right"
 		},
 		{
-			"loop": false,
 			"offsets": [
-				-15,
-				0
-			],
-			"anim": "stare",
-			"fps": 24,
-			"name": "clone stare",
-			"indices": []
-		},
-		{
-			"loop": false,
-			"offsets": [
-				69,
+				2,
 				1
 			],
-			"anim": "hit",
-			"fps": 24,
-			"name": "clone hit",
-			"indices": []
-		},
-		{
-			"offsets": [
-				-22,
-				132
-			],
-			"indices": [],
-			"fps": 24,
-			"anim": "attack",
 			"loop": false,
-			"name": "clone attack"
+			"fps": 24,
+			"anim": "special",
+			"indices": [],
+			"name": "Stare"
 		}
 	],
 	"no_antialiasing": false,
-	"image": "characters/clone",
+	"image": "characters/pissfart",
 	"position": [
-		0,
-		-70
+		-40,
+		-170
 	],
 	"healthicon": "clone",
 	"flip_x": false,
 	"healthbar_colors": [
-		165,
-		165,
-		165
+		81,
+		81,
+		81
 	],
 	"camera_position": [
-		-280,
-		-70
+		0,
+		0
 	],
 	"sing_duration": 6.1,
 	"scale": 1

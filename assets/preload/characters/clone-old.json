@@ -1,0 +1,111 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "idle",
+			"indices": [],
+			"name": "clone idle"
+		},
+		{
+			"offsets": [
+				171,
+				-30
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "clone left"
+		},
+		{
+			"offsets": [
+				-30,
+				-88
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "clone down"
+		},
+		{
+			"offsets": [
+				30,
+				60
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [],
+			"name": "clone up"
+		},
+		{
+			"offsets": [
+				-30,
+				-84
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "clone right"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-15,
+				0
+			],
+			"anim": "stare",
+			"fps": 24,
+			"name": "clone stare",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				69,
+				1
+			],
+			"anim": "hit",
+			"fps": 24,
+			"name": "clone hit",
+			"indices": []
+		},
+		{
+			"offsets": [
+				-22,
+				132
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "attack",
+			"loop": false,
+			"name": "clone attack"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/clone",
+	"position": [
+		0,
+		-70
+	],
+	"healthicon": "clone",
+	"flip_x": false,
+	"healthbar_colors": [
+		165,
+		165,
+		165
+	],
+	"camera_position": [
+		-280,
+		-70
+	],
+	"sing_duration": 6.1,
+	"scale": 1
+}
