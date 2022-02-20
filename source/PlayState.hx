@@ -241,6 +241,7 @@ class PlayState extends MusicBeatState
 	public static var deathCounter:Int = 0;
 
 	public var defaultCamZoom:Float = 1.05;
+	public var originalZoom:Float = 1.05; //for boyfriend and dad camera zooming
 
 	// how big to stretch the pixel art assets
 	public static var daPixelZoom:Float = 6;
@@ -408,6 +409,35 @@ class PlayState extends MusicBeatState
 
 		switch (curStage)
 		{
+
+			case 'street':
+				var sky:FlxSprite = new FlxSprite(0,0).loadGraphic(Paths.image('Stages/Street/Sky', 'scopto'));
+				add(sky);
+
+				var cHouse:FlxSprite = new FlxSprite(-130.45, 278.4).loadGraphic(Paths.image('Stages/Street/ciara house', 'scopto'));
+				cHouse.updateHitbox();
+				add(cHouse);
+
+				var grass:FlxSprite = new FlxSprite(1379.6, 895.35).loadGraphic(Paths.image('Stages/Street/Grass', 'scopto'));
+				grass.updateHitbox();
+				add(grass);
+
+				var house:FlxSprite = new FlxSprite(1921.8, 294.3).loadGraphic(Paths.image('Stages/Street/House', 'scopto'));
+				house.updateHitbox();
+				add(house);
+
+				var tree:FlxSprite = new FlxSprite(1446,-1.2).loadGraphic(Paths.image('Stages/Street/Tree', 'scopto'));
+				tree.updateHitbox();
+				add(tree);
+
+				var road:FlxSprite = new FlxSprite(-3.7, 712.1).loadGraphic(Paths.image('Stages/Street/Road', 'scopto'));
+				road.updateHitbox();
+				add(road);
+
+				var post:FlxSprite = new FlxSprite(1150.15,-2.95).loadGraphic(Paths.image('Stages/Street/Lamp post', 'scopto'));
+				post.updateHitbox();
+				add(post);
+
 			case 'stage': //Week 1
 				var bg:BGSprite = new BGSprite('stageback', -600, -200, 0.9, 0.9);
 				add(bg);
@@ -833,6 +863,8 @@ class PlayState extends MusicBeatState
 			case 'schoolEvil':
 				var evilTrail = new FlxTrail(dad, null, 4, 24, 0.3, 0.069); //nice
 				insert(members.indexOf(dadGroup) - 1, evilTrail);
+			case 'street':
+				gf.visible = false;
 		}
 
 		var file:String = Paths.json(songName + '/dialogue'); //Checks for json/Psych Engine dialogue
@@ -2676,6 +2708,20 @@ class PlayState extends MusicBeatState
 		}
 	}
 
+	function cameraFollowPos(value1:Float, value2:Float):Void {
+		var val1:Float = value1;
+		var val2:Float = value2;
+		if(Math.isNaN(val1)) val1 = 0;
+		if(Math.isNaN(val2)) val2 = 0;
+
+		isCameraOnForcedPos = false;
+		if(!Math.isNaN(value1) || !Math.isNaN(value2)) {
+			camFollow.x = val1;
+			camFollow.y = val2;
+			isCameraOnForcedPos = true;
+		}
+	}
+
 	function openChartEditor()
 	{
 		persistentUpdate = false;
@@ -3897,6 +3943,23 @@ class PlayState extends MusicBeatState
 			notes.remove(note, true);
 			note.destroy();
 		}
+		if (curSong.toLowerCase() != 'gloomy-streets')
+			{
+				var _camofs:Float = 30;
+
+				var xx1:Float = dad.getMidpoint().x + 150 + dad.cameraPosition[0];
+				var yy1:Float = dad.getMidpoint().y - 100 + dad.cameraPosition[1];
+
+				//if(!SONG.notes[Std.int(curStep / 16)].mustHitSection) defaultCamZoom = 0.9;
+
+				if(!SONG.notes[Std.int(curStep / 16)].mustHitSection) {
+					if (dad.animation.curAnim.name == 'singLEFT') cameraFollowPos(xx1 - _camofs, yy1);
+					else if (dad.animation.curAnim.name == 'singRIGHT') cameraFollowPos(xx1 + _camofs, yy1);
+					else if (dad.animation.curAnim.name == 'singUP') cameraFollowPos(xx1, yy1 - _camofs);
+					else if (dad.animation.curAnim.name == 'singDOWN') cameraFollowPos(xx1, yy1 + _camofs);
+					if (dad.danceIdle && !dad.animation.curAnim.name.startsWith("sing") && !dad.stunned) cameraFollowPos(xx1, yy1);
+				}
+			}
 	}
 
 	function goodNoteHit(note:Note):Void
@@ -3978,6 +4041,23 @@ class PlayState extends MusicBeatState
 						gf.heyTimer = 0.6;
 					}
 				}
+				if (curSong.toLowerCase() != 'gloomy-streets')
+					{
+							var _camofs:Float = 25;
+	
+							var xx2:Float = boyfriend.getMidpoint().x - 100 + boyfriend.cameraPosition[0];
+							var yy2:Float = boyfriend.getMidpoint().y - 100 + boyfriend.cameraPosition[1];
+
+							//if(!SONG.notes[Std.int(curStep / 16)].mustHitSection) defaultCamZoom = 0.9;
+	
+							if(SONG.notes[Std.int(curStep / 16)].mustHitSection) {
+								if (boyfriend.animation.curAnim.name == 'singLEFT') cameraFollowPos(xx2 - _camofs, yy2);
+								else if (boyfriend.animation.curAnim.name == 'singRIGHT') cameraFollowPos(xx2 + _camofs, yy2);
+								else if (boyfriend.animation.curAnim.name == 'singUP') cameraFollowPos(xx2, yy2 - _camofs);
+								else if (boyfriend.animation.curAnim.name == 'singDOWN') cameraFollowPos(xx2, yy2 + _camofs);
+								if (boyfriend.danceIdle && !boyfriend.animation.curAnim.name.startsWith("sing") && !boyfriend.stunned) cameraFollowPos(xx2, yy2);
+							}
+					}
 			}
 
 			if(cpuControlled) {

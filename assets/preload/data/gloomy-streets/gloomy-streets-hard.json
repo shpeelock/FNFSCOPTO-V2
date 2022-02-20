@@ -3195,14 +3195,114 @@
 				"bpm": 130
 			},
 			{
-				"gfSection": false,
 				"lengthInSteps": 16,
-				"altAnim": false,
 				"typeOfSection": 0,
 				"sectionNotes": [],
+				"altAnim": false,
+				"gfSection": false,
 				"bpm": 130,
 				"changeBPM": false,
 				"mustHitSection": true
+			},
+			{
+				"lengthInSteps": 16,
+				"typeOfSection": 0,
+				"sectionNotes": [],
+				"altAnim": false,
+				"gfSection": false,
+				"bpm": 130,
+				"changeBPM": false,
+				"mustHitSection": true
+			},
+			{
+				"lengthInSteps": 16,
+				"typeOfSection": 0,
+				"sectionNotes": [],
+				"altAnim": false,
+				"gfSection": false,
+				"bpm": 130,
+				"changeBPM": false,
+				"mustHitSection": true
+			},
+			{
+				"lengthInSteps": 16,
+				"typeOfSection": 0,
+				"sectionNotes": [],
+				"altAnim": false,
+				"gfSection": false,
+				"bpm": 130,
+				"changeBPM": false,
+				"mustHitSection": true
+			},
+			{
+				"sectionNotes": [],
+				"typeOfSection": 0,
+				"lengthInSteps": 16,
+				"gfSection": false,
+				"altAnim": false,
+				"mustHitSection": true,
+				"changeBPM": false,
+				"bpm": 130
+			},
+			{
+				"sectionNotes": [],
+				"typeOfSection": 0,
+				"lengthInSteps": 16,
+				"gfSection": false,
+				"altAnim": false,
+				"mustHitSection": true,
+				"changeBPM": false,
+				"bpm": 130
+			},
+			{
+				"sectionNotes": [],
+				"typeOfSection": 0,
+				"lengthInSteps": 16,
+				"gfSection": false,
+				"altAnim": false,
+				"mustHitSection": true,
+				"changeBPM": false,
+				"bpm": 130
+			},
+			{
+				"sectionNotes": [],
+				"typeOfSection": 0,
+				"lengthInSteps": 16,
+				"gfSection": false,
+				"altAnim": false,
+				"mustHitSection": true,
+				"changeBPM": false,
+				"bpm": 130
+			},
+			{
+				"sectionNotes": [],
+				"typeOfSection": 0,
+				"lengthInSteps": 16,
+				"gfSection": false,
+				"altAnim": false,
+				"mustHitSection": true,
+				"changeBPM": false,
+				"bpm": 130
+			},
+			{
+				"sectionNotes": [],
+				"typeOfSection": 0,
+				"lengthInSteps": 16,
+				"gfSection": false,
+				"altAnim": false,
+				"mustHitSection": true,
+				"changeBPM": false,
+				"bpm": 130
+			},
+			{
+				"sectionNotes": [],
+				"typeOfSection": 0,
+				"lengthInSteps": 16,
+				"gfSection": false,
+				"altAnim": false,
+				"mustHitSection": true,
+				"changeBPM": false,
+				"bpm": 130
 			},
 			{
 				"gfSection": false,
@@ -3244,12 +3344,153 @@
 		"speed": 2.5,
 		"isMoody": false,
 		"sectionLengths": [],
-		"events": [],
+		"events": [
+			[
+				0,
+				[
+					[
+						"Cam Boom Speed",
+						"12",
+						""
+					]
+				]
+			],
+			[
+				115.384615384615,
+				[
+					[
+						"Set Cam Zoom",
+						"0.95",
+						"3.88"
+					]
+				]
+			],
+			[
+				14538.4615384615,
+				[
+					[
+						"Set Cam Zoom",
+						"0.85",
+						"0.3"
+					]
+				]
+			],
+			[
+				14769.2307692308,
+				[
+					[
+						"Cam Boom Speed",
+						"8",
+						"2"
+					]
+				]
+			],
+			[
+				20076.9230769231,
+				[
+					[
+						"Set Cam Zoom",
+						"1.05",
+						""
+					]
+				]
+			],
+			[
+				22153.8461538462,
+				[
+					[
+						"Set Cam Zoom",
+						"0.85",
+						""
+					]
+				]
+			],
+			[
+				27461.5384615385,
+				[
+					[
+						"Set Cam Zoom",
+						"1.05",
+						""
+					]
+				]
+			],
+			[
+				29538.4615384615,
+				[
+					[
+						"Set Cam Zoom",
+						"0.85",
+						""
+					]
+				]
+			],
+			[
+				35076.9230769231,
+				[
+					[
+						"Set Cam Zoom",
+						"1.05",
+						""
+					]
+				]
+			],
+			[
+				36000,
+				[
+					[
+						"Set Cam Zoom",
+						"0.95",
+						""
+					]
+				]
+			],
+			[
+				36923.0769230769,
+				[
+					[
+						"Set Cam Zoom",
+						"0.85",
+						""
+					]
+				]
+			],
+			[
+				42461.5384615385,
+				[
+					[
+						"Set Cam Zoom",
+						"1.05",
+						""
+					]
+				]
+			],
+			[
+				43384.6153846154,
+				[
+					[
+						"Set Cam Zoom",
+						"0.95",
+						""
+					]
+				]
+			],
+			[
+				44307.6923076923,
+				[
+					[
+						"Set Cam Zoom",
+						"0.85",
+						""
+					]
+				]
+			]
+		],
 		"gfVersion": "gf",
-		"stage": "street",
 		"uiType": "normal",
-		"needsVoices": true,
+		"stage": "street",
 		"sections": 0,
+		"needsVoices": true,
 		"bpm": 130,
 		"gf": "gf"
 	}
