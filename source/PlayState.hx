@@ -395,35 +395,6 @@ class PlayState extends MusicBeatState
 
 		switch (curStage)
 		{
-
-			case 'street':
-				var sky:FlxSprite = new FlxSprite(0,0).loadGraphic(Paths.image('Stages/Street/Sky', 'scopto'));
-				add(sky);
-
-				var cHouse:FlxSprite = new FlxSprite(-130.45, 278.4).loadGraphic(Paths.image('Stages/Street/ciara house', 'scopto'));
-				cHouse.updateHitbox();
-				add(cHouse);
-
-				var grass:FlxSprite = new FlxSprite(1379.6, 895.35).loadGraphic(Paths.image('Stages/Street/Grass', 'scopto'));
-				grass.updateHitbox();
-				add(grass);
-
-				var house:FlxSprite = new FlxSprite(1921.8, 294.3).loadGraphic(Paths.image('Stages/Street/House', 'scopto'));
-				house.updateHitbox();
-				add(house);
-
-				var tree:FlxSprite = new FlxSprite(1446,-1.2).loadGraphic(Paths.image('Stages/Street/Tree', 'scopto'));
-				tree.updateHitbox();
-				add(tree);
-
-				var road:FlxSprite = new FlxSprite(-3.7, 712.1).loadGraphic(Paths.image('Stages/Street/Road', 'scopto'));
-				road.updateHitbox();
-				add(road);
-
-				var post:FlxSprite = new FlxSprite(1150.15,-2.95).loadGraphic(Paths.image('Stages/Street/Lamp post', 'scopto'));
-				post.updateHitbox();
-				add(post);
-
 			case 'stage': //Week 1
 				var bg:BGSprite = new BGSprite('stageback', -600, -200, 0.9, 0.9);
 				add(bg);
@@ -3801,23 +3772,6 @@ class PlayState extends MusicBeatState
 			notes.remove(note, true);
 			note.destroy();
 		}
-		if (curSong.toLowerCase() != 'gloomy-streets')
-			{
-				var _camofs:Float = 30;
-
-				var xx1:Float = dad.getMidpoint().x + 150 + dad.cameraPosition[0];
-				var yy1:Float = dad.getMidpoint().y - 100 + dad.cameraPosition[1];
-
-				//if(!SONG.notes[Std.int(curStep / 16)].mustHitSection) defaultCamZoom = 0.9;
-
-				if(!SONG.notes[Std.int(curStep / 16)].mustHitSection) {
-					if (dad.animation.curAnim.name == 'singLEFT') cameraFollowPos(xx1 - _camofs, yy1);
-					else if (dad.animation.curAnim.name == 'singRIGHT') cameraFollowPos(xx1 + _camofs, yy1);
-					else if (dad.animation.curAnim.name == 'singUP') cameraFollowPos(xx1, yy1 - _camofs);
-					else if (dad.animation.curAnim.name == 'singDOWN') cameraFollowPos(xx1, yy1 + _camofs);
-					if (dad.danceIdle && !dad.animation.curAnim.name.startsWith("sing") && !dad.stunned) cameraFollowPos(xx1, yy1);
-				}
-			}
 	}
 
 	function goodNoteHit(note:Note):Void
@@ -3899,23 +3853,6 @@ class PlayState extends MusicBeatState
 						gf.heyTimer = 0.6;
 					}
 				}
-				if (curSong.toLowerCase() != 'gloomy-streets')
-					{
-							var _camofs:Float = 25;
-	
-							var xx2:Float = boyfriend.getMidpoint().x - 100 + boyfriend.cameraPosition[0];
-							var yy2:Float = boyfriend.getMidpoint().y - 100 + boyfriend.cameraPosition[1];
-
-							//if(!SONG.notes[Std.int(curStep / 16)].mustHitSection) defaultCamZoom = 0.9;
-	
-							if(SONG.notes[Std.int(curStep / 16)].mustHitSection) {
-								if (boyfriend.animation.curAnim.name == 'singLEFT') cameraFollowPos(xx2 - _camofs, yy2);
-								else if (boyfriend.animation.curAnim.name == 'singRIGHT') cameraFollowPos(xx2 + _camofs, yy2);
-								else if (boyfriend.animation.curAnim.name == 'singUP') cameraFollowPos(xx2, yy2 - _camofs);
-								else if (boyfriend.animation.curAnim.name == 'singDOWN') cameraFollowPos(xx2, yy2 + _camofs);
-								if (boyfriend.danceIdle && !boyfriend.animation.curAnim.name.startsWith("sing") && !boyfriend.stunned) cameraFollowPos(xx2, yy2);
-							}
-					}
 			}
 
 			if(cpuControlled) {
